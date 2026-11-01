@@ -4,10 +4,9 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .virtual_documents/
-CNN/data/
+CNN/**/data/
 *.pt
 *.pth
-!ANN/best_model.pt
 .env
 .env.*
 .DS_Store

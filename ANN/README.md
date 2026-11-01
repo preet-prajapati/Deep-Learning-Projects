@@ -1,8 +1,9 @@
-# Artificial Neural Networks (ANN)
+# Artificial Neural Network Projects
 
-- `ANN_Classification.ipynb`: Date fruit classification; uses `10 DateFruit_Dataset.csv`.
-- `ANN_Regression.ipynb`: Power plant regression; uses `2  powerplant_data.csv` (two spaces after 2).
-- `Concrete_Strength_Prediction.ipynb`: Concrete strength regression; uses `Concrete_Data.xls`.
-- `Neuron.ipynb`: A simple linear neuron example.
+| Project | Task | Input |
+| --- | --- | --- |
+| [Date Fruit Classification](Date-Fruit-Classification/) | Multiclass classification | Fruit measurements |
+| [Power Plant Regression](Power-Plant-Regression/) | Regression | Environmental measurements |
+| [Concrete Strength Prediction](Concrete-Strength-Prediction/) | Regression | Concrete mixture and age |
 
-Install the root requirements, open Jupyter, and run each notebook from this folder. Dataset filenames are preserved so existing relative paths continue to work. The supplied `best_model.pt` is a saved checkpoint; both regression notebooks can overwrite it when training.
+Each project contains its notebook, dataset, and dedicated README. Start with the [root setup guide](../README.md), then follow the selected project README.

@@ -22,10 +22,10 @@ CIFAR-10 downloads automatically through torchvision into `./data` on first run.
 - **Preparation:** torchvision CIFAR10 with tensor conversion and per-channel normalization using mean 0.5 and standard deviation 0.5.
 - **Architecture:** Three convolution/ReLU/max-pooling blocks (32, 64, 128 channels), followed by a 256-unit ReLU layer and ten class logits.
 - **Training:** Cross-entropy loss, Adam, ten epochs, batch size 64; official training and test splits. Uses CUDA when available, otherwise CPU.
-- **Evaluation:** Test-set accuracy.
+- **Evaluation:** Test-set accuracy, per-class precision/recall/F1, confusion matrix, and training loss curve.
 
 ## Reproducibility and limitations
 
-These are learning projects. Training has not been rerun as part of repository organization; no new performance claims are made. Outputs are cleared so a fresh run produces its own results.
+These are learning projects. All training and evaluation cells were executed on 1 November 2026; the notebook includes the resulting outputs and plots. See the [execution report](../../EXECUTION_REPORT.md) for measured results and environment details.
 
-Dependencies are shared in the root `requirements.txt`; versions are not pinned because the source projects had no recorded environment. Training is stochastic and results may vary. Included tabular files retain their original contents; dataset provenance and redistribution terms were not supplied with the source projects.
+Dependencies are shared in the root `requirements.txt`. The exact environment used for the checked run is recorded in `execution-environment.json` at the repository root. Training is stochastic and results may vary. Included tabular files retain their original contents; dataset provenance and redistribution terms were not supplied with the source projects.

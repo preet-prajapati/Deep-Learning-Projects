@@ -20,13 +20,13 @@ Predict power plant energy output (PE) from temperature (AT), exhaust vacuum (V)
 
 ## Workflow
 
-- **Preparation:** An 80/20 train/test split (random_state=42) and standardization fitted on training data.
+- **Preparation:** A 64/16/20 train/validation/test split (random_state=42) and standardization fitted only on training data.
 - **Architecture:** A feedforward ANN with two six-unit ReLU hidden layers and one regression output.
-- **Training:** Mean squared error loss, Adam, 100 epochs, batch size 32. The notebook uses the held-out split for validation and checkpoint selection.
-- **Evaluation:** MSE, R-squared, loss curves, and predicted versus actual values.
+- **Training:** Mean squared error loss, Adam, 100 epochs, batch size 32. A separate validation split selects the best checkpoint; the test set is reserved for final evaluation.
+- **Evaluation:** MSE, MAE, RMSE, R-squared, loss curves, predicted versus actual values, and residual plots.
 
 ## Reproducibility and limitations
 
-These are learning projects. Training has not been rerun as part of repository organization; no new performance claims are made. Outputs are cleared so a fresh run produces its own results. The current validation split also serves as the evaluation split, so reported metrics are not an independent final test estimate. For a rigorous experiment, add a separate validation split for model selection. Training writes `best_model.pt` inside this project folder; checkpoints are generated artifacts and are excluded from Git.
+These are learning projects. All training and evaluation cells were executed on 1 November 2026; the notebook includes the resulting outputs and plots. See the [execution report](../../EXECUTION_REPORT.md) for measured results and environment details. The best validation checkpoint is loaded before final evaluation on the independent test set. Training writes `best_model.pt` inside this project folder; checkpoints are generated artifacts and are excluded from Git.
 
-Dependencies are shared in the root `requirements.txt`; versions are not pinned because the source projects had no recorded environment. Training is stochastic and results may vary. Included tabular files retain their original contents; dataset provenance and redistribution terms were not supplied with the source projects.
+Dependencies are shared in the root `requirements.txt`. The exact environment used for the checked run is recorded in `execution-environment.json` at the repository root. Training is stochastic and results may vary. Included tabular files retain their original contents; dataset provenance and redistribution terms were not supplied with the source projects.

@@ -63,4 +63,4 @@ The three small ANN datasets are included next to their notebooks. CIFAR-10 down
 
 ## Validation and scope
 
-Notebook JSON, code-cell syntax, relative dataset paths, and documentation links are checked during organization. Model training has not been rerun. Stored notebook outputs are cleared; rerun the notebooks to generate results. Dependencies are unpinned because the original environment was not recorded. These are educational experiments; see individual READMEs for evaluation limitations.
+All four notebooks were executed from top to bottom, with their complete outputs and plots saved. Original model architectures, optimizers, and epoch counts are preserved. Targeted fixes add independent validation for regression checkpoint selection, restore the concrete model checkpoint before evaluation, and complete evaluation visualizations. See [EXECUTION_REPORT.md](EXECUTION_REPORT.md) for actual results and [execution-environment.json](execution-environment.json) for the tested environment. These are educational experiments; results may vary between environments.

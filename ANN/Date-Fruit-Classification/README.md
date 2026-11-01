@@ -23,10 +23,10 @@ Classify date fruit varieties from numerical measurements.
 - **Preparation:** StandardScaler fitted on training data, label encoding, PCA retaining 95% variance, and a 34-feature input dataset.
 - **Architecture:** A feedforward ANN with two 64-unit ReLU hidden layers and seven output classes.
 - **Training:** Cross-entropy loss, Adam, 100 epochs, batch size 32; stratified 80/20 train/test split (random_state=42).
-- **Evaluation:** Test-set accuracy.
+- **Evaluation:** Test-set accuracy, per-class precision/recall/F1, confusion matrix, and training loss curve.
 
 ## Reproducibility and limitations
 
-These are learning projects. Training has not been rerun as part of repository organization; no new performance claims are made. Outputs are cleared so a fresh run produces its own results.
+These are learning projects. All training and evaluation cells were executed on 1 November 2026; the notebook includes the resulting outputs and plots. See the [execution report](../../EXECUTION_REPORT.md) for measured results and environment details.
 
-Dependencies are shared in the root `requirements.txt`; versions are not pinned because the source projects had no recorded environment. Training is stochastic and results may vary. Included tabular files retain their original contents; dataset provenance and redistribution terms were not supplied with the source projects.
+Dependencies are shared in the root `requirements.txt`. The exact environment used for the checked run is recorded in `execution-environment.json` at the repository root. Training is stochastic and results may vary. Included tabular files retain their original contents; dataset provenance and redistribution terms were not supplied with the source projects.
